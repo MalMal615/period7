@@ -14,7 +14,7 @@
     End Sub
     Public Sub Draw()
         Using g As Graphics = Graphics.FromImage(m_image)
-            g.DrawRectangle(Pen, m_a.X, m_a.Y, w, h, 50, 50,)
+            g.DrawRectangle(Pen, m_a.X, m_a.Y, w, h)
 
         End Using
 
