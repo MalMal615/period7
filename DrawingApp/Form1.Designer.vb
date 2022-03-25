@@ -40,6 +40,11 @@ Partial Class Form1
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar3 = New System.Windows.Forms.TrackBar()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +76,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.LawnGreen
+        Me.Button2.BackColor = System.Drawing.Color.Black
         Me.Button2.Location = New System.Drawing.Point(675, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(26, 25)
@@ -171,7 +176,7 @@ Partial Class Form1
         'TrackBar2
         '
         Me.TrackBar2.Location = New System.Drawing.Point(679, 354)
-        Me.TrackBar2.Maximum = 50
+        Me.TrackBar2.Maximum = 100
         Me.TrackBar2.Minimum = 10
         Me.TrackBar2.Name = "TrackBar2"
         Me.TrackBar2.Size = New System.Drawing.Size(104, 45)
@@ -181,18 +186,68 @@ Partial Class Form1
         'TrackBar3
         '
         Me.TrackBar3.Location = New System.Drawing.Point(679, 406)
-        Me.TrackBar3.Maximum = 50
+        Me.TrackBar3.Maximum = 100
         Me.TrackBar3.Minimum = 10
         Me.TrackBar3.Name = "TrackBar3"
         Me.TrackBar3.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar3.TabIndex = 15
         Me.TrackBar3.Value = 10
         '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(26, 471)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(92, 36)
+        Me.Button10.TabIndex = 16
+        Me.Button10.Text = "circle"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(137, 471)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(92, 36)
+        Me.Button11.TabIndex = 17
+        Me.Button11.Text = "rectangle"
+        Me.Button11.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(26, 536)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(92, 36)
+        Me.Button12.TabIndex = 18
+        Me.Button12.Text = "arc"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(137, 536)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(92, 36)
+        Me.Button13.TabIndex = 19
+        Me.Button13.Text = "line"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(258, 471)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(92, 36)
+        Me.Button14.TabIndex = 20
+        Me.Button14.Text = "pie"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(857, 640)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.Button12)
+        Me.Controls.Add(Me.Button11)
+        Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.TrackBar3)
         Me.Controls.Add(Me.TrackBar2)
         Me.Controls.Add(Me.savebutton)
@@ -238,4 +293,9 @@ Partial Class Form1
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents TrackBar2 As TrackBar
     Friend WithEvents TrackBar3 As TrackBar
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
 End Class
