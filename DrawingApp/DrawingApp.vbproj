@@ -98,6 +98,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="pie.vb" />
+    <Compile Include="polygon.vb" />
     <Compile Include="rect.vb" />
     <Compile Include="square.vb" />
     <Compile Include="triangle.vb" />

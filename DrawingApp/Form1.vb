@@ -42,7 +42,12 @@
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
             End If
-
+            If type = "Polygon" Then
+                D = New polygon(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+            End If
             m_shapes.Add(D)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -142,5 +147,8 @@
 
     Private Sub PieButton_Click(sender As Object, e As EventArgs) Handles Button14.Click
         type = "Pie"
+    End Sub
+    Private Sub PolygonButton_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        type = "Polygon"
     End Sub
 End Class

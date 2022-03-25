@@ -45,6 +45,7 @@ Partial Class Form1
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -208,7 +209,7 @@ Partial Class Form1
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(92, 36)
         Me.Button11.TabIndex = 17
-        Me.Button11.Text = "rectangle"
+        Me.Button11.Text = "square"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
@@ -238,11 +239,21 @@ Partial Class Form1
         Me.Button14.Text = "pie"
         Me.Button14.UseVisualStyleBackColor = True
         '
+        'Button15
+        '
+        Me.Button15.Location = New System.Drawing.Point(258, 536)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(92, 36)
+        Me.Button15.TabIndex = 21
+        Me.Button15.Text = "polygon"
+        Me.Button15.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(857, 640)
+        Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button13)
         Me.Controls.Add(Me.Button12)
@@ -298,4 +309,5 @@ Partial Class Form1
     Friend WithEvents Button12 As Button
     Friend WithEvents Button13 As Button
     Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
 End Class
