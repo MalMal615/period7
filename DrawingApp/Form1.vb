@@ -54,6 +54,12 @@
                 D.radius = TrackBar5.Value
                 D.sides = TrackBar4.Value
             End If
+            If type = "picture" Then
+                D = New PBbox(PictureBox1.Image, m_Previous, e.Location)
+                D.picture = PictureBox2.Image
+                D.h = TrackBar2.Value
+                D.w = TrackBar3.Value
+            End If
             m_shapes.Add(D)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -160,5 +166,17 @@
 
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
         type = "n-gon"
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        type = "picture"
+    End Sub
+
+    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
+        PictureBox2.Load(OpenFileDialog1.FileName)
     End Sub
 End Class
