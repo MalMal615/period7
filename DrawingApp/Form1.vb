@@ -48,6 +48,12 @@
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
             End If
+            If type = "n-gon" Then
+                D = New n_gon(PictureBox1.Image, m_Previous, e.Location)
+                D.pen = New Pen(c, w)
+                D.radius = TrackBar5.Value
+                D.sides = TrackBar4.Value
+            End If
             m_shapes.Add(D)
             PictureBox1.Invalidate()
             m_Previous = e.Location
@@ -150,5 +156,9 @@
     End Sub
     Private Sub PolygonButton_Click(sender As Object, e As EventArgs) Handles Button15.Click
         type = "Polygon"
+    End Sub
+
+    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
+        type = "n-gon"
     End Sub
 End Class

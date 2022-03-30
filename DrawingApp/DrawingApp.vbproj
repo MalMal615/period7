@@ -97,6 +97,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="n-gon.vb" />
     <Compile Include="pie.vb" />
     <Compile Include="polygon.vb" />
     <Compile Include="rect.vb" />

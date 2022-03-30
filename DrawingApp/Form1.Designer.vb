@@ -46,10 +46,17 @@ Partial Class Form1
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
+        Me.Button16 = New System.Windows.Forms.Button()
+        Me.TrackBar4 = New System.Windows.Forms.TrackBar()
+        Me.TrackBar5 = New System.Windows.Forms.TrackBar()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -248,11 +255,63 @@ Partial Class Form1
         Me.Button15.Text = "polygon"
         Me.Button15.UseVisualStyleBackColor = True
         '
+        'Button16
+        '
+        Me.Button16.Location = New System.Drawing.Point(375, 471)
+        Me.Button16.Name = "Button16"
+        Me.Button16.Size = New System.Drawing.Size(93, 36)
+        Me.Button16.TabIndex = 22
+        Me.Button16.Text = "n-gon"
+        Me.Button16.UseVisualStyleBackColor = True
+        '
+        'TrackBar4
+        '
+        Me.TrackBar4.Location = New System.Drawing.Point(679, 506)
+        Me.TrackBar4.Maximum = 20
+        Me.TrackBar4.Minimum = 3
+        Me.TrackBar4.Name = "TrackBar4"
+        Me.TrackBar4.Size = New System.Drawing.Size(104, 45)
+        Me.TrackBar4.TabIndex = 23
+        Me.TrackBar4.Value = 3
+        '
+        'TrackBar5
+        '
+        Me.TrackBar5.Location = New System.Drawing.Point(679, 557)
+        Me.TrackBar5.Maximum = 200
+        Me.TrackBar5.Minimum = 10
+        Me.TrackBar5.Name = "TrackBar5"
+        Me.TrackBar5.Size = New System.Drawing.Size(95, 45)
+        Me.TrackBar5.TabIndex = 24
+        Me.TrackBar5.Value = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(610, 509)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(34, 13)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "sides "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(610, 559)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(35, 13)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "radius"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(857, 640)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TrackBar5)
+        Me.Controls.Add(Me.TrackBar4)
+        Me.Controls.Add(Me.Button16)
         Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.Button14)
         Me.Controls.Add(Me.Button13)
@@ -281,6 +340,8 @@ Partial Class Form1
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -310,4 +371,9 @@ Partial Class Form1
     Friend WithEvents Button13 As Button
     Friend WithEvents Button14 As Button
     Friend WithEvents Button15 As Button
+    Friend WithEvents Button16 As Button
+    Friend WithEvents TrackBar4 As TrackBar
+    Friend WithEvents TrackBar5 As TrackBar
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class
