@@ -322,7 +322,7 @@ Partial Class Form1
         Me.Button17.Name = "Button17"
         Me.Button17.Size = New System.Drawing.Size(75, 32)
         Me.Button17.TabIndex = 28
-        Me.Button17.Text = "Button17"
+        Me.Button17.Text = "picture"
         Me.Button17.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
