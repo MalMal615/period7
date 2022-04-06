@@ -10,13 +10,17 @@
         pictureBox1_MouseMove(sender, e)
     End Sub
     Private Sub pictureBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox1.MouseMove
+
+
         If m_Previous IsNot Nothing Then
             Dim D As Object
             D = New Line(PictureBox1.Image, m_Previous, e.Location)
             D.pen = New Pen(c, w)
+
             If type = "Line" Then
                 D = New Line(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
+                D.xspeed = speedtrackbar.Value
             End If
             If type = "Rectangle" Then
                 D = New rect(PictureBox1.Image, m_Previous, e.Location)
@@ -31,13 +35,13 @@
                 D.w = TrackBar3.Value
             End If
             If type = "Arc" Then
-                D = New Arc(PictureBox1.Image, m_Previous, e.Location)
+                D = New arc(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
             End If
             If type = "Pie" Then
-                D = New Pie(PictureBox1.Image, m_Previous, e.Location)
+                D = New pie(PictureBox1.Image, m_Previous, e.Location)
                 D.pen = New Pen(c, w)
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
@@ -70,6 +74,10 @@
         m_Previous = Nothing
     End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+
+    End Sub
+    Sub clear()
         If PictureBox1.Image Is Nothing Then
             Dim bmp As New Bitmap(PictureBox1.Width, PictureBox1.Height)
             Using g As Graphics = Graphics.FromImage(bmp)
@@ -77,13 +85,15 @@
             End Using
             PictureBox1.Image = bmp
         End If
-
     End Sub
-
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
         For Each s As Object In m_shapes
             s.Draw()
         Next
+        If (autorefresh.Checked) Then
+            Refresh()
+
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -54,6 +54,9 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button17 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.speedtrackbar = New System.Windows.Forms.TrackBar()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.autorefresh = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +64,7 @@ Partial Class Form1
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.speedtrackbar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -73,7 +77,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(687, 191)
+        Me.Button1.Location = New System.Drawing.Point(675, 78)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(26, 25)
         Me.Button1.TabIndex = 1
@@ -81,7 +85,7 @@ Partial Class Form1
         '
         'TrackBar1
         '
-        Me.TrackBar1.Location = New System.Drawing.Point(675, 122)
+        Me.TrackBar1.Location = New System.Drawing.Point(678, 140)
         Me.TrackBar1.Name = "TrackBar1"
         Me.TrackBar1.Size = New System.Drawing.Size(104, 45)
         Me.TrackBar1.TabIndex = 2
@@ -107,7 +111,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(676, 106)
+        Me.Label1.Location = New System.Drawing.Point(675, 124)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 13)
         Me.Label1.TabIndex = 5
@@ -169,25 +173,25 @@ Partial Class Form1
         '
         'clearbutton
         '
-        Me.clearbutton.Location = New System.Drawing.Point(675, 222)
+        Me.clearbutton.Location = New System.Drawing.Point(305, 438)
         Me.clearbutton.Name = "clearbutton"
-        Me.clearbutton.Size = New System.Drawing.Size(114, 62)
+        Me.clearbutton.Size = New System.Drawing.Size(67, 50)
         Me.clearbutton.TabIndex = 12
         Me.clearbutton.Text = "clear"
         Me.clearbutton.UseVisualStyleBackColor = True
         '
         'savebutton
         '
-        Me.savebutton.Location = New System.Drawing.Point(675, 290)
+        Me.savebutton.Location = New System.Drawing.Point(378, 440)
         Me.savebutton.Name = "savebutton"
-        Me.savebutton.Size = New System.Drawing.Size(107, 48)
+        Me.savebutton.Size = New System.Drawing.Size(67, 48)
         Me.savebutton.TabIndex = 13
         Me.savebutton.Text = "save"
         Me.savebutton.UseVisualStyleBackColor = True
         '
         'TrackBar2
         '
-        Me.TrackBar2.Location = New System.Drawing.Point(679, 354)
+        Me.TrackBar2.Location = New System.Drawing.Point(679, 204)
         Me.TrackBar2.Maximum = 100
         Me.TrackBar2.Minimum = 10
         Me.TrackBar2.Name = "TrackBar2"
@@ -197,7 +201,7 @@ Partial Class Form1
         '
         'TrackBar3
         '
-        Me.TrackBar3.Location = New System.Drawing.Point(679, 406)
+        Me.TrackBar3.Location = New System.Drawing.Point(679, 255)
         Me.TrackBar3.Maximum = 100
         Me.TrackBar3.Minimum = 10
         Me.TrackBar3.Name = "TrackBar3"
@@ -207,63 +211,63 @@ Partial Class Form1
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(26, 471)
+        Me.Button10.Location = New System.Drawing.Point(12, 438)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(92, 36)
+        Me.Button10.Size = New System.Drawing.Size(40, 36)
         Me.Button10.TabIndex = 16
         Me.Button10.Text = "circle"
         Me.Button10.UseVisualStyleBackColor = True
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(137, 471)
+        Me.Button11.Location = New System.Drawing.Point(61, 438)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(92, 36)
+        Me.Button11.Size = New System.Drawing.Size(40, 36)
         Me.Button11.TabIndex = 17
         Me.Button11.Text = "square"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(26, 536)
+        Me.Button12.Location = New System.Drawing.Point(12, 480)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(92, 36)
+        Me.Button12.Size = New System.Drawing.Size(40, 36)
         Me.Button12.TabIndex = 18
         Me.Button12.Text = "arc"
         Me.Button12.UseVisualStyleBackColor = True
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(137, 536)
+        Me.Button13.Location = New System.Drawing.Point(61, 480)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(92, 36)
+        Me.Button13.Size = New System.Drawing.Size(40, 36)
         Me.Button13.TabIndex = 19
         Me.Button13.Text = "line"
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(258, 471)
+        Me.Button14.Location = New System.Drawing.Point(107, 438)
         Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(92, 36)
+        Me.Button14.Size = New System.Drawing.Size(40, 36)
         Me.Button14.TabIndex = 20
         Me.Button14.Text = "pie"
         Me.Button14.UseVisualStyleBackColor = True
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(258, 536)
+        Me.Button15.Location = New System.Drawing.Point(107, 480)
         Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(92, 36)
+        Me.Button15.Size = New System.Drawing.Size(40, 36)
         Me.Button15.TabIndex = 21
         Me.Button15.Text = "polygon"
         Me.Button15.UseVisualStyleBackColor = True
         '
         'Button16
         '
-        Me.Button16.Location = New System.Drawing.Point(375, 471)
+        Me.Button16.Location = New System.Drawing.Point(153, 438)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(93, 36)
+        Me.Button16.Size = New System.Drawing.Size(40, 36)
         Me.Button16.TabIndex = 22
         Me.Button16.Text = "n-gon"
         Me.Button16.UseVisualStyleBackColor = True
@@ -309,7 +313,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.WindowsApplication1.My.Resources.Resources.Grand_Canyon_scaled
-        Me.PictureBox2.Location = New System.Drawing.Point(375, 536)
+        Me.PictureBox2.Location = New System.Drawing.Point(199, 438)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -318,9 +322,9 @@ Partial Class Form1
         '
         'Button17
         '
-        Me.Button17.Location = New System.Drawing.Point(26, 596)
+        Me.Button17.Location = New System.Drawing.Point(153, 480)
         Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(75, 32)
+        Me.Button17.Size = New System.Drawing.Size(40, 34)
         Me.Button17.TabIndex = 28
         Me.Button17.Text = "picture"
         Me.Button17.UseVisualStyleBackColor = True
@@ -329,11 +333,41 @@ Partial Class Form1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'speedtrackbar
+        '
+        Me.speedtrackbar.Location = New System.Drawing.Point(679, 306)
+        Me.speedtrackbar.Minimum = -10
+        Me.speedtrackbar.Name = "speedtrackbar"
+        Me.speedtrackbar.Size = New System.Drawing.Size(104, 45)
+        Me.speedtrackbar.TabIndex = 29
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(677, 287)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(36, 13)
+        Me.Label4.TabIndex = 30
+        Me.Label4.Text = "speed"
+        '
+        'autorefresh
+        '
+        Me.autorefresh.AutoSize = True
+        Me.autorefresh.Location = New System.Drawing.Point(679, 347)
+        Me.autorefresh.Name = "autorefresh"
+        Me.autorefresh.Size = New System.Drawing.Size(85, 17)
+        Me.autorefresh.TabIndex = 31
+        Me.autorefresh.Text = "AutoRefresh"
+        Me.autorefresh.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(857, 640)
+        Me.Controls.Add(Me.autorefresh)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.speedtrackbar)
         Me.Controls.Add(Me.Button17)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label3)
@@ -372,6 +406,7 @@ Partial Class Form1
         CType(Me.TrackBar4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.speedtrackbar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -409,4 +444,7 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button17 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents speedtrackbar As TrackBar
+    Friend WithEvents Label4 As Label
+    Friend WithEvents autorefresh As CheckBox
 End Class
