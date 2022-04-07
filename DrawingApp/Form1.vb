@@ -27,6 +27,7 @@
                 D.pen = New Pen(c, w)
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
+                D.fill = CheckBox1.Checked
             End If
             If type = "Circle" Then
                 D = New circle(PictureBox1.Image, m_Previous, e.Location)
@@ -87,6 +88,8 @@
         End If
     End Sub
     Private Sub PictureBox1_Paint(sender As Object, e As PaintEventArgs) Handles PictureBox1.Paint
+        clear()
+
         For Each s As Object In m_shapes
             s.Draw()
         Next
@@ -188,5 +191,9 @@
 
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
         PictureBox2.Load(OpenFileDialog1.FileName)
+    End Sub
+
+    Private Sub rectButton_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
