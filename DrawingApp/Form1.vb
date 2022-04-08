@@ -28,6 +28,8 @@
                 D.h = TrackBar2.Value
                 D.w = TrackBar3.Value
                 D.fill = CheckBox1.Checked
+                D.color1 = Button2.BackColor
+                D.color2 = Button3.BackColor
             End If
             If type = "Circle" Then
                 D = New circle(PictureBox1.Image, m_Previous, e.Location)
@@ -107,11 +109,16 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        c = sender.backcolor
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        sender.BackColor = c
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        c = sender.backcolor
+        ColorDialog1.ShowDialog()
+        c = ColorDialog1.Color
+        sender.BackColor = c
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         c = sender.backcolor
